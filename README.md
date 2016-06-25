@@ -1,6 +1,11 @@
-# Yet Another Unofficial StarterKit to create Cisco Spark bots in NodeJS
+# Spark Bot for automating things
 
-A minimal NodeJS Starter Kit to create your own [Spark](https://ciscospark.com/) bot, with few dependencies and goal to keep them at a minimum (Express that's it). 
+Adapted from https://github.com/ObjectIsAdvantag/sparkbot-starterkit, I will update the documentation shortly but just wanted to get things going
+
+
+## Yet Another Unofficial StarterKit to create Cisco Spark bots in NodeJS
+
+A minimal NodeJS Starter Kit to create your own [Spark](https://ciscospark.com/) bot, with few dependencies and goal to keep them at a minimum (Express that's it).
 Started after [@CiscoDevNet SmartCity Paris](https://twitter.com/hashtag/devnethackathon) and @TADHack London hackathons, to bootstrap dev teams in minutes.
 
 New to Cisco Spark ?
@@ -16,8 +21,8 @@ Looking for :
 
 # Pick a sparkbot example and run it
 
-Go to the examples directory and pick an nodejs example. 
-We suggest you start with the "basic-webhook.js". 
+Go to the examples directory and pick an nodejs example.
+We suggest you start with the "basic-webhook.js".
 
 Hereafter we show you the code, you do not need to modify it for now.
 You'll create your custom sparkbot later, by copy pasting an example and extend the code.
@@ -38,7 +43,7 @@ var config = {
 // Starts your Webhook
 var bot = new SparkBot(config);
 
-// This function will be called every time a new message is posted into Spark 
+// This function will be called every time a new message is posted into Spark
 bot.register(function(message) {
   //
   // ADD YOUR CUSTOM CODE HERE
@@ -48,7 +53,7 @@ bot.register(function(message) {
 ```
 
 
-Well, time to run your sparkbot and expose it to the Web. 
+Well, time to run your sparkbot and expose it to the Web.
 Let's do that !
 
 ``` bash
@@ -60,7 +65,7 @@ Let's do that !
 // if you are in OSX you have to run
 > sudo npm install
 
-// pick an example 
+// pick an example
 > cd examples
 
 // launch your spark bot, default to port 8080
@@ -69,7 +74,7 @@ Let's do that !
 Cisco Spark bot started, running on port 8080
 
 // open a second console and check your bot is running by hitting your sparkbot health resource:
-// open in a web browser http://localhost:8080/ping/ 
+// open in a web browser http://localhost:8080/ping/
 // or use a back command such as curl, [httpie](https://github.com/jkbrzt/httpie), or [bat](https://github.com/astaxie/bat)
 > curl http://localhost:8080/ping/
 // OSX note: if localhost doesn't work for you, try 127.0.0.1
@@ -86,7 +91,7 @@ Cisco Spark bot started, running on port 8080
 your url is: https://sparkbot.localtunnel.me
 
 // check everything is running ok by hitting your sparkbot health resource
-// open in a web browser https://sparkbot.localtunnel.me/ping/ 
+// open in a web browser https://sparkbot.localtunnel.me/ping/
 // or use a back command such as curl, [httpie](https://github.com/jkbrzt/httpie), or [bat](https://github.com/astaxie/bat)
 > curl -v -X GET https://sparkbot.localtunnel.me/ping
 * ...
